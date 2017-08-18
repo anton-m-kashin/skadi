@@ -3,11 +3,15 @@ import UIKit
 class ViewController: UIViewController {
 
   private let imageView: CoreImageView = {
-    if MetalImageView.isAvailable {
-      return MetalImageView(frame: CGRect.zero)
-    } else {
+    #if arch(arm) || arch(arm64)
+      if MetalImageView.isAvailable {
+        return MetalImageView(frame: CGRect.zero)
+      } else {
+        return GLImageView(frame: CGRect.zero)
+      }
+    #else
       return GLImageView(frame: CGRect.zero)
-    }
+    #endif
   } ()
 
   override func loadView() {
