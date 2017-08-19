@@ -17,6 +17,11 @@
 		3A88D1A51F4722300083798B /* CGRect+AspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D1A41F4722300083798B /* CGRect+AspectFit.swift */; };
 		3A88D1A91F4726730083798B /* EAGLContext+HigherAvailableAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D1A81F4726730083798B /* EAGLContext+HigherAvailableAPI.swift */; };
 		3ABEA6021F484567006FA083 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEA6011F484567006FA083 /* AppCoordinator.swift */; };
+		3ABEA6051F488368006FA083 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEA6041F488368006FA083 /* Filter.swift */; };
+		3ABEA6071F488397006FA083 /* Bloom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEA6061F488397006FA083 /* Bloom.swift */; };
+		3ABEA6091F488861006FA083 /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEA6081F488861006FA083 /* Crop.swift */; };
+		3ABEA60B1F4889D7006FA083 /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEA60A1F4889D7006FA083 /* Edges.swift */; };
+		3ABEA60D1F488A4C006FA083 /* Pixellate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEA60C1F488A4C006FA083 /* Pixellate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		3A88D1A41F4722300083798B /* CGRect+AspectFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+AspectFit.swift"; sourceTree = "<group>"; };
 		3A88D1A81F4726730083798B /* EAGLContext+HigherAvailableAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EAGLContext+HigherAvailableAPI.swift"; sourceTree = "<group>"; };
 		3ABEA6011F484567006FA083 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		3ABEA6041F488368006FA083 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		3ABEA6061F488397006FA083 /* Bloom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bloom.swift; sourceTree = "<group>"; };
+		3ABEA6081F488861006FA083 /* Crop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
+		3ABEA60A1F4889D7006FA083 /* Edges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edges.swift; sourceTree = "<group>"; };
+		3ABEA60C1F488A4C006FA083 /* Pixellate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pixellate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,7 @@
 		3A88D18B1F470A720083798B /* Skadi */ = {
 			isa = PBXGroup;
 			children = (
+				3ABEA6031F48835F006FA083 /* Filter */,
 				3A88D18C1F470A720083798B /* AppDelegate.swift */,
 				3ABEA6011F484567006FA083 /* AppCoordinator.swift */,
 				3A88D18E1F470A720083798B /* ViewController.swift */,
@@ -93,6 +104,18 @@
 				3A88D1A21F4719AA0083798B /* GLImageView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		3ABEA6031F48835F006FA083 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				3ABEA6041F488368006FA083 /* Filter.swift */,
+				3ABEA6081F488861006FA083 /* Crop.swift */,
+				3ABEA6061F488397006FA083 /* Bloom.swift */,
+				3ABEA60A1F4889D7006FA083 /* Edges.swift */,
+				3ABEA60C1F488A4C006FA083 /* Pixellate.swift */,
+			);
+			name = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,13 +190,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ABEA60D1F488A4C006FA083 /* Pixellate.swift in Sources */,
 				3A88D18F1F470A720083798B /* ViewController.swift in Sources */,
 				3A88D1A11F4718300083798B /* CoreImageView.swift in Sources */,
+				3ABEA60B1F4889D7006FA083 /* Edges.swift in Sources */,
 				3A88D1A31F4719AA0083798B /* GLImageView.swift in Sources */,
+				3ABEA6091F488861006FA083 /* Crop.swift in Sources */,
 				3A88D1A91F4726730083798B /* EAGLContext+HigherAvailableAPI.swift in Sources */,
 				3ABEA6021F484567006FA083 /* AppCoordinator.swift in Sources */,
 				3A88D19F1F470B2E0083798B /* MetalImageView.swift in Sources */,
 				3A88D18D1F470A720083798B /* AppDelegate.swift in Sources */,
+				3ABEA6071F488397006FA083 /* Bloom.swift in Sources */,
+				3ABEA6051F488368006FA083 /* Filter.swift in Sources */,
 				3A88D1A51F4722300083798B /* CGRect+AspectFit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

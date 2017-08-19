@@ -30,6 +30,7 @@ class ViewController<ImageView: CoreImageView>: UIViewController where ImageView
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    imageView.image = CIImage(image: #imageLiteral(resourceName: "Sailboat"))
+    let image = CIImage(image: #imageLiteral(resourceName: "Sailboat"))
+    imageView.image = Pixellate(input: image).output
   }
 }
