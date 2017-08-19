@@ -2,12 +2,12 @@
 
   import MetalKit
 
-  final class MetalImageView: CoreImageView {
+  final class MetalImageView: UIView, CoreImageView {
 
     private let drawer: Drawer
     private let mtlView: MTKView
 
-    override var image: CIImage? {
+    var image: CIImage? {
       set {
         drawer.image = newValue
         mtlView.setNeedsDisplay()

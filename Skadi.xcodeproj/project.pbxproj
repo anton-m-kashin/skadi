@@ -16,6 +16,7 @@
 		3A88D1A31F4719AA0083798B /* GLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D1A21F4719AA0083798B /* GLImageView.swift */; };
 		3A88D1A51F4722300083798B /* CGRect+AspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D1A41F4722300083798B /* CGRect+AspectFit.swift */; };
 		3A88D1A91F4726730083798B /* EAGLContext+HigherAvailableAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D1A81F4726730083798B /* EAGLContext+HigherAvailableAPI.swift */; };
+		3ABEA6021F484567006FA083 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEA6011F484567006FA083 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3A88D1A21F4719AA0083798B /* GLImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLImageView.swift; sourceTree = "<group>"; };
 		3A88D1A41F4722300083798B /* CGRect+AspectFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+AspectFit.swift"; sourceTree = "<group>"; };
 		3A88D1A81F4726730083798B /* EAGLContext+HigherAvailableAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EAGLContext+HigherAvailableAPI.swift"; sourceTree = "<group>"; };
+		3ABEA6011F484567006FA083 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				3A88D18C1F470A720083798B /* AppDelegate.swift */,
+				3ABEA6011F484567006FA083 /* AppCoordinator.swift */,
 				3A88D18E1F470A720083798B /* ViewController.swift */,
 				3A88D1AB1F4726EB0083798B /* Views */,
 				3A88D1AA1F4726E00083798B /* Additions */,
@@ -168,6 +171,7 @@
 				3A88D1A11F4718300083798B /* CoreImageView.swift in Sources */,
 				3A88D1A31F4719AA0083798B /* GLImageView.swift in Sources */,
 				3A88D1A91F4726730083798B /* EAGLContext+HigherAvailableAPI.swift in Sources */,
+				3ABEA6021F484567006FA083 /* AppCoordinator.swift in Sources */,
 				3A88D19F1F470B2E0083798B /* MetalImageView.swift in Sources */,
 				3A88D18D1F470A720083798B /* AppDelegate.swift in Sources */,
 				3A88D1A51F4722300083798B /* CGRect+AspectFit.swift in Sources */,

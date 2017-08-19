@@ -1,11 +1,11 @@
 import GLKit
 
-final class GLImageView: CoreImageView {	
+final class GLImageView: UIView, CoreImageView {
 
   private let drawer: Drawer
   private let glView: GLKView
 
-  override var image: CIImage? {
+  var image: CIImage? {
     set {
       drawer.image = newValue
       glView.setNeedsDisplay()

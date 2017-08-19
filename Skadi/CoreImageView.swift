@@ -1,5 +1,5 @@
-import UIKit
+import CoreImage
 
-class CoreImageView: UIView {
-  var image: CIImage?
+protocol CoreImageView: class {
+  var image: CIImage? { set get }
 }

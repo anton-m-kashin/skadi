@@ -1,18 +1,18 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController<ImageView: CoreImageView>: UIViewController where ImageView: UIView {
 
-  private let imageView: CoreImageView = {
-    #if arch(arm) || arch(arm64)
-      if MetalImageView.isAvailable {
-        return MetalImageView(frame: CGRect.zero)
-      } else {
-        return GLImageView(frame: CGRect.zero)
-      }
-    #else
-      return GLImageView(frame: CGRect.zero)
-    #endif
-  } ()
+  private let imageView: ImageView
+
+  init(imageView: ImageView) {
+    self.imageView = imageView
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  @available (*, unavailable)
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 
   override func loadView() {
     super.loadView()
