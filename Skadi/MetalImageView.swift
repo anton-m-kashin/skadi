@@ -1,3 +1,4 @@
+// Because Metal is not available in iPhone Simulator
 #if arch(arm) || arch(arm64)
 
   import MetalKit
@@ -86,7 +87,7 @@
     }
 
     private func updateScaledImage() {
-      scaledImage = image.map { scale(image: $0) }
+      scaledImage = image.map(scale(image:)).map(center(image:))
     }
 
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
@@ -97,6 +98,9 @@
     func draw(in view: MTKView) {
       guard let currentDrawable = view.currentDrawable, let image = scaledImage else { return }
       let commandBuffer = commandQueue.makeCommandBuffer()
+      print("drawableSize: \(drawableSize)")
+      print("image.extent: \(self.image!.extent)")
+      print("scaledImage.extent: \(self.scaledImage!.extent)")
       ciContext.render(
         image,
         to: currentDrawable.texture,
@@ -108,18 +112,25 @@
       commandBuffer.commit()
     }
 
+    // MARK: Image Helpers
+
     private func scale(image: CIImage) -> CIImage {
       let scale = min(
         drawableSize.width / image.extent.width,
         drawableSize.height / image.extent.height
       )
-      let origin = CGPoint(
-        x: (drawableSize.width - image.extent.size.width * scale) / 2,
-        y: (drawableSize.height - image.extent.size.height * scale) / 2
+      return image.applying(CGAffineTransform(scaleX: scale, y: scale))
+    }
+
+    private func center(image: CIImage) -> CIImage {
+      let horizontalMargin = (drawableSize.width - image.extent.size.width) / 2
+      let verticalMargin = (drawableSize.height - image.extent.size.height) / 2
+      return image.applying(
+        CGAffineTransform(
+          translationX: horizontalMargin + abs(image.extent.origin.x),
+          y: verticalMargin + abs(image.extent.origin.y)
+        )
       )
-      return image
-        .applying(CGAffineTransform(scaleX: scale, y: scale))
-        .applying(CGAffineTransform(translationX: origin.x, y: origin.y))
     }
   }
   
