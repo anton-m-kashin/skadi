@@ -10,6 +10,7 @@
     override var image: CIImage? {
       set {
         drawer.image = newValue
+        mtlView.setNeedsDisplay()
       }
       get {
         return drawer.image
@@ -23,6 +24,8 @@
       drawer = Drawer(device: device)
       mtlView = MTKView(frame: CGRect(origin: CGPoint.zero, size: frame.size), device: device)
       mtlView.framebufferOnly = false
+      mtlView.isPaused = true
+      mtlView.enableSetNeedsDisplay = true
       mtlView.delegate = drawer
       super.init(frame: frame)
       setupSubview()
@@ -45,11 +48,6 @@
           trailingAnchor.constraint(equalTo: mtlView.trailingAnchor)
         ]
       )
-    }
-
-    override func layoutSubviews() {
-      super.layoutSubviews()
-      mtlView.setNeedsDisplay()
     }
   }
 
@@ -88,11 +86,7 @@
     }
 
     private func updateScaledImage() {
-      if let image = image {
-        scaledImage = scale(image: image)
-      } else {
-        scaledImage = nil
-      }
+      scaledImage = image.map { scale(image: $0) }
     }
 
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
@@ -115,7 +109,10 @@
     }
 
     private func scale(image: CIImage) -> CIImage {
-      let scale = min(drawableSize.width / image.extent.width, drawableSize.height / image.extent.height)
+      let scale = min(
+        drawableSize.width / image.extent.width,
+        drawableSize.height / image.extent.height
+      )
       let origin = CGPoint(
         x: (drawableSize.width - image.extent.size.width * scale) / 2,
         y: (drawableSize.height - image.extent.size.height * scale) / 2
