@@ -8,7 +8,7 @@ final class Crop: Filter {
 
   var rect: CGRect
 
-  var inputParameters: [String : Any]? {
+  var inputParameters: [String : Any] {
     return [
       "inputRectangle": vectorizedRect
     ]

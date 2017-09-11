@@ -8,7 +8,7 @@ final class Edges: Filter {
 
   var intensity: Float
 
-  var inputParameters: [String : Any]? {
+  var inputParameters: [String : Any] {
     return ["inputIntensity": intensity]
   }
 

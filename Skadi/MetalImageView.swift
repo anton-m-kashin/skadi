@@ -81,7 +81,11 @@
 
     init(device: MTLDevice) {
       ciContext = CIContext(mtlDevice: device)
-      commandQueue = device.makeCommandQueue()
+      if let commandQueue = device.makeCommandQueue() {
+        self.commandQueue = commandQueue
+      } else {
+        fatalError("Cannot create command queue!")
+      }
       colorSpace = CGColorSpaceCreateDeviceRGB()
       drawableSize = CGSize.zero
     }
@@ -98,9 +102,6 @@
     func draw(in view: MTKView) {
       guard let currentDrawable = view.currentDrawable, let image = scaledImage else { return }
       let commandBuffer = commandQueue.makeCommandBuffer()
-      print("drawableSize: \(drawableSize)")
-      print("image.extent: \(self.image!.extent)")
-      print("scaledImage.extent: \(self.scaledImage!.extent)")
       ciContext.render(
         image,
         to: currentDrawable.texture,
@@ -108,8 +109,8 @@
         bounds: CGRect(origin: CGPoint.zero, size: drawableSize),
         colorSpace: colorSpace
       )
-      commandBuffer.present(currentDrawable)
-      commandBuffer.commit()
+      commandBuffer?.present(currentDrawable)
+      commandBuffer?.commit()
     }
 
     // MARK: Image Helpers
@@ -119,14 +120,14 @@
         drawableSize.width / image.extent.width,
         drawableSize.height / image.extent.height
       )
-      return image.applying(CGAffineTransform(scaleX: scale, y: scale))
+      return image.transformed(by: CGAffineTransform(scaleX: scale, y: scale))
     }
 
     private func center(image: CIImage) -> CIImage {
       let horizontalMargin = (drawableSize.width - image.extent.size.width) / 2
       let verticalMargin = (drawableSize.height - image.extent.size.height) / 2
-      return image.applying(
-        CGAffineTransform(
+      return image.transformed(
+        by: CGAffineTransform(
           translationX: horizontalMargin + abs(image.extent.origin.x),
           y: verticalMargin + abs(image.extent.origin.y)
         )

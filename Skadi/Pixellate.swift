@@ -9,7 +9,7 @@ final class Pixellate: Filter {
   var center: CGPoint
   var scale: Float
 
-  var inputParameters: [String : Any]? {
+  var inputParameters: [String : Any] {
     return [
       "inputCenter": vectorizedCenter,
       "inputScale": scale

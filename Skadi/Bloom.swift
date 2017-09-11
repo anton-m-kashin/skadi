@@ -8,7 +8,7 @@ final class Bloom: Filter {
 
   var output: CIImage? {
     guard let input = input else { return nil }
-    let bloomed = input.applyingFilter(name, withInputParameters: inputParameters)
+    let bloomed = input.applyingFilter(name, parameters: inputParameters)
     if !cropToOriginalSize { return bloomed }
     return Crop(input: bloomed, rect: input.extent).output
   }
@@ -18,7 +18,7 @@ final class Bloom: Filter {
 
   var cropToOriginalSize: Bool
 
-  var inputParameters: [String : Any]? {
+  var inputParameters: [String : Any] {
     return [
       "inputRadius": radius,
       "inputIntensity": intensity
