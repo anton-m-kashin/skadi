@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A26D5E21FDB411200BB0A69 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A26D5E11FDB411200BB0A69 /* ImagesCollectionViewController.swift */; };
+		3A26D5E41FDB437E00BB0A69 /* UIView+PinToBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A26D5E31FDB437E00BB0A69 /* UIView+PinToBorders.swift */; };
 		3A88D18D1F470A720083798B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D18C1F470A720083798B /* AppDelegate.swift */; };
 		3A88D18F1F470A720083798B /* CoreImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D18E1F470A720083798B /* CoreImageViewController.swift */; };
 		3A88D1941F470A720083798B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A88D1931F470A720083798B /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A26D5E11FDB411200BB0A69 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		3A26D5E31FDB437E00BB0A69 /* UIView+PinToBorders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinToBorders.swift"; sourceTree = "<group>"; };
 		3A88D1891F470A720083798B /* Skadi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skadi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A88D18C1F470A720083798B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A88D18E1F470A720083798B /* CoreImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				3A88D18E1F470A720083798B /* CoreImageViewController.swift */,
+				3A26D5E11FDB411200BB0A69 /* ImagesCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			children = (
 				3A88D1A41F4722300083798B /* CGRect+AspectFit.swift */,
 				3A88D1A81F4726730083798B /* EAGLContext+HigherAvailableAPI.swift */,
+				3A26D5E31FDB437E00BB0A69 /* UIView+PinToBorders.swift */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -221,12 +227,14 @@
 				3A88D18F1F470A720083798B /* CoreImageViewController.swift in Sources */,
 				3A88D1A11F4718300083798B /* CoreImageView.swift in Sources */,
 				3ABEA60B1F4889D7006FA083 /* Edges.swift in Sources */,
+				3A26D5E21FDB411200BB0A69 /* ImagesCollectionViewController.swift in Sources */,
 				3A88D1A31F4719AA0083798B /* GLImageView.swift in Sources */,
 				3ABEA6091F488861006FA083 /* Crop.swift in Sources */,
 				3A88D1A91F4726730083798B /* EAGLContext+HigherAvailableAPI.swift in Sources */,
 				3ABEA6021F484567006FA083 /* AppCoordinator.swift in Sources */,
 				3A88D19F1F470B2E0083798B /* MetalImageView.swift in Sources */,
 				3A88D18D1F470A720083798B /* AppDelegate.swift in Sources */,
+				3A26D5E41FDB437E00BB0A69 /* UIView+PinToBorders.swift in Sources */,
 				3ABEA6071F488397006FA083 /* Bloom.swift in Sources */,
 				3ABEA6051F488368006FA083 /* Filter.swift in Sources */,
 				3A88D1A51F4722300083798B /* CGRect+AspectFit.swift in Sources */,

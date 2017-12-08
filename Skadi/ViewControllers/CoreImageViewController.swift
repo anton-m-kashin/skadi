@@ -62,13 +62,6 @@ final class CoreImageViewController: UIViewController {
   private func setupLayout() {
     assert(view.constraints.isEmpty)
     imageView.translatesAutoresizingMaskIntoConstraints = false
-    NSLayoutConstraint.activate(
-      [
-        view.topAnchor.constraint(equalTo: imageView.topAnchor),
-        view.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
-        view.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
-        view.trailingAnchor.constraint(equalTo: imageView.trailingAnchor)
-      ]
-    )
+    imageView.pinToSuperviewBorders()
   }
 }

@@ -9,8 +9,13 @@ final class AppCoordinator {
   }
 
   func start() {
-    self.window.rootViewController = CoreImageViewController(
-      image: Pixellate(input: CIImage(image: #imageLiteral(resourceName: "Sailboat"))).output
+    let image = CIImage(image: #imageLiteral(resourceName: "Sailboat"))
+    self.window.rootViewController = ImagesCollectionViewController(
+      images: [
+        Bloom(input: image).output!,
+        Edges(input: image).output!,
+        Pixellate(input: image).output!,
+      ]
     )
     window.makeKeyAndVisible()
   }
