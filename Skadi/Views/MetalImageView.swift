@@ -23,7 +23,10 @@
         fatalError("Device doesn't support Metal")
       }
       drawer = Drawer(device: device)
-      mtlView = MTKView(frame: CGRect(origin: CGPoint.zero, size: frame.size), device: device)
+      mtlView = MTKView(
+        frame: CGRect(origin: CGPoint.zero, size: frame.size),
+        device: device
+      )
       mtlView.framebufferOnly = false
       mtlView.isPaused = true
       mtlView.enableSetNeedsDisplay = true
@@ -100,7 +103,10 @@
     }
 
     func draw(in view: MTKView) {
-      guard let currentDrawable = view.currentDrawable, let image = scaledImage else { return }
+      guard
+        let currentDrawable = view.currentDrawable,
+        let image = scaledImage
+      else { return }
       let commandBuffer = commandQueue.makeCommandBuffer()
       ciContext.render(
         image,

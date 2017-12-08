@@ -17,13 +17,16 @@ final class GLImageView: UIView, CoreImageView {
 
   override init(frame: CGRect) {
     let glContext: EAGLContext = {
-      guard let glContext = EAGLContext.makeContextWithHigherAvailableAPI() else {
-        fatalError("Device doesn't support OpenGLES")
-      }
+      guard
+        let glContext = EAGLContext.makeContextWithHigherAvailableAPI()
+      else { fatalError("Device doesn't support OpenGLES") }
       return glContext
     } ()
     drawer = Drawer(glContext: glContext)
-    glView = GLKView(frame: CGRect(origin: CGPoint.zero, size: frame.size), context: glContext)
+    glView = GLKView(
+      frame: CGRect(origin: CGPoint.zero, size: frame.size),
+      context: glContext
+    )
     glView.delegate = drawer
     super.init(frame: frame)
     setupSubview()
