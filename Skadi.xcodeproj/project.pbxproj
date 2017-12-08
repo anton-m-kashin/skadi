@@ -55,6 +55,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A26D5DE1FDB402200BB0A69 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A88D1951F470A720083798B /* LaunchScreen.storyboard */,
+				3A88D1981F470A720083798B /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A26D5DF1FDB402F00BB0A69 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A88D1931F470A720083798B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3A26D5E01FDB405B00BB0A69 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A88D18E1F470A720083798B /* CoreImageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		3A88D1801F470A720083798B = {
 			isa = PBXGroup;
 			children = (
@@ -76,15 +101,14 @@
 		3A88D18B1F470A720083798B /* Skadi */ = {
 			isa = PBXGroup;
 			children = (
+				3A88D1AA1F4726E00083798B /* Additions */,
 				3ABEA6031F48835F006FA083 /* Filter */,
 				3A88D18C1F470A720083798B /* AppDelegate.swift */,
 				3ABEA6011F484567006FA083 /* AppCoordinator.swift */,
-				3A88D18E1F470A720083798B /* CoreImageViewController.swift */,
+				3A26D5E01FDB405B00BB0A69 /* ViewControllers */,
 				3A88D1AB1F4726EB0083798B /* Views */,
-				3A88D1AA1F4726E00083798B /* Additions */,
-				3A88D1931F470A720083798B /* Assets.xcassets */,
-				3A88D1951F470A720083798B /* LaunchScreen.storyboard */,
-				3A88D1981F470A720083798B /* Info.plist */,
+				3A26D5DF1FDB402F00BB0A69 /* Resources */,
+				3A26D5DE1FDB402200BB0A69 /* Supporting Files */,
 			);
 			path = Skadi;
 			sourceTree = "<group>";
@@ -95,7 +119,7 @@
 				3A88D1A41F4722300083798B /* CGRect+AspectFit.swift */,
 				3A88D1A81F4726730083798B /* EAGLContext+HigherAvailableAPI.swift */,
 			);
-			name = Additions;
+			path = Additions;
 			sourceTree = "<group>";
 		};
 		3A88D1AB1F4726EB0083798B /* Views */ = {
@@ -105,7 +129,7 @@
 				3A88D19E1F470B2E0083798B /* MetalImageView.swift */,
 				3A88D1A21F4719AA0083798B /* GLImageView.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3ABEA6031F48835F006FA083 /* Filter */ = {
@@ -117,7 +141,7 @@
 				3ABEA60A1F4889D7006FA083 /* Edges.swift */,
 				3ABEA60C1F488A4C006FA083 /* Pixellate.swift */,
 			);
-			name = Filter;
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,7 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5TVK64Y5EZ;
-				INFOPLIST_FILE = Skadi/Info.plist;
+				INFOPLIST_FILE = "Skadi/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-kashin.Skadi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,7 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5TVK64Y5EZ;
-				INFOPLIST_FILE = Skadi/Info.plist;
+				INFOPLIST_FILE = "Skadi/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-kashin.Skadi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
