@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A88D18D1F470A720083798B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D18C1F470A720083798B /* AppDelegate.swift */; };
-		3A88D18F1F470A720083798B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D18E1F470A720083798B /* ViewController.swift */; };
+		3A88D18F1F470A720083798B /* CoreImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D18E1F470A720083798B /* CoreImageViewController.swift */; };
 		3A88D1941F470A720083798B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A88D1931F470A720083798B /* Assets.xcassets */; };
 		3A88D1971F470A720083798B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A88D1951F470A720083798B /* LaunchScreen.storyboard */; };
 		3A88D19F1F470B2E0083798B /* MetalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D19E1F470B2E0083798B /* MetalImageView.swift */; };
@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		3A88D1891F470A720083798B /* Skadi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skadi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A88D18C1F470A720083798B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A88D18E1F470A720083798B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A88D18E1F470A720083798B /* CoreImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageViewController.swift; sourceTree = "<group>"; };
 		3A88D1931F470A720083798B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A88D1961F470A720083798B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A88D1981F470A720083798B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,7 +61,9 @@
 				3A88D18B1F470A720083798B /* Skadi */,
 				3A88D18A1F470A720083798B /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		3A88D18A1F470A720083798B /* Products */ = {
 			isa = PBXGroup;
@@ -77,7 +79,7 @@
 				3ABEA6031F48835F006FA083 /* Filter */,
 				3A88D18C1F470A720083798B /* AppDelegate.swift */,
 				3ABEA6011F484567006FA083 /* AppCoordinator.swift */,
-				3A88D18E1F470A720083798B /* ViewController.swift */,
+				3A88D18E1F470A720083798B /* CoreImageViewController.swift */,
 				3A88D1AB1F4726EB0083798B /* Views */,
 				3A88D1AA1F4726E00083798B /* Additions */,
 				3A88D1931F470A720083798B /* Assets.xcassets */,
@@ -192,7 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ABEA60D1F488A4C006FA083 /* Pixellate.swift in Sources */,
-				3A88D18F1F470A720083798B /* ViewController.swift in Sources */,
+				3A88D18F1F470A720083798B /* CoreImageViewController.swift in Sources */,
 				3A88D1A11F4718300083798B /* CoreImageView.swift in Sources */,
 				3ABEA60B1F4889D7006FA083 /* Edges.swift in Sources */,
 				3A88D1A31F4719AA0083798B /* GLImageView.swift in Sources */,
