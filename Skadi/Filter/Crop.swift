@@ -1,8 +1,8 @@
 import CoreImage
 
-final class Crop: Filter {
+final class Crop: ImageApplyingFilter {
 
-  var name = "CICrop"
+  let name = "CICrop"
 
   var input: CIImage?
 

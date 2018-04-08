@@ -1,8 +1,8 @@
 import CoreImage
 
-final class Pixellate: Filter {
+final class Pixellate: ImageApplyingFilter {
 
-  var name = "CIPixellate"
+  let name = "CIPixellate"
 
   var input: CIImage?
 

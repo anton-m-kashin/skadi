@@ -18,6 +18,9 @@
 		3A88D1A31F4719AA0083798B /* GLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D1A21F4719AA0083798B /* GLImageView.swift */; };
 		3A88D1A51F4722300083798B /* CGRect+AspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D1A41F4722300083798B /* CGRect+AspectFit.swift */; };
 		3A88D1A91F4726730083798B /* EAGLContext+HigherAvailableAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88D1A81F4726730083798B /* EAGLContext+HigherAvailableAPI.swift */; };
+		3A985BC4207A6BF1001FC5C0 /* ColorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A985BC3207A6BF1001FC5C0 /* ColorMap.swift */; };
+		3A985BC6207A709F001FC5C0 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A985BC5207A709F001FC5C0 /* Gradient.swift */; };
+		3A985BC8207A8A2A001FC5C0 /* ImageApplyingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A985BC7207A8A2A001FC5C0 /* ImageApplyingFilter.swift */; };
 		3ABEA6021F484567006FA083 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEA6011F484567006FA083 /* AppCoordinator.swift */; };
 		3ABEA6051F488368006FA083 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEA6041F488368006FA083 /* Filter.swift */; };
 		3ABEA6071F488397006FA083 /* Bloom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEA6061F488397006FA083 /* Bloom.swift */; };
@@ -40,6 +43,9 @@
 		3A88D1A21F4719AA0083798B /* GLImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLImageView.swift; sourceTree = "<group>"; };
 		3A88D1A41F4722300083798B /* CGRect+AspectFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+AspectFit.swift"; sourceTree = "<group>"; };
 		3A88D1A81F4726730083798B /* EAGLContext+HigherAvailableAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EAGLContext+HigherAvailableAPI.swift"; sourceTree = "<group>"; };
+		3A985BC3207A6BF1001FC5C0 /* ColorMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMap.swift; sourceTree = "<group>"; };
+		3A985BC5207A709F001FC5C0 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		3A985BC7207A8A2A001FC5C0 /* ImageApplyingFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageApplyingFilter.swift; sourceTree = "<group>"; };
 		3ABEA6011F484567006FA083 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3ABEA6041F488368006FA083 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		3ABEA6061F488397006FA083 /* Bloom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bloom.swift; sourceTree = "<group>"; };
@@ -142,10 +148,13 @@
 			isa = PBXGroup;
 			children = (
 				3ABEA6041F488368006FA083 /* Filter.swift */,
+				3A985BC7207A8A2A001FC5C0 /* ImageApplyingFilter.swift */,
+				3A985BC3207A6BF1001FC5C0 /* ColorMap.swift */,
 				3ABEA6081F488861006FA083 /* Crop.swift */,
 				3ABEA6061F488397006FA083 /* Bloom.swift */,
 				3ABEA60A1F4889D7006FA083 /* Edges.swift */,
 				3ABEA60C1F488A4C006FA083 /* Pixellate.swift */,
+				3A985BC5207A709F001FC5C0 /* Gradient.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -227,13 +236,16 @@
 				3A88D18F1F470A720083798B /* CoreImageViewController.swift in Sources */,
 				3A88D1A11F4718300083798B /* CoreImageView.swift in Sources */,
 				3ABEA60B1F4889D7006FA083 /* Edges.swift in Sources */,
+				3A985BC6207A709F001FC5C0 /* Gradient.swift in Sources */,
 				3A26D5E21FDB411200BB0A69 /* ImagesCollectionViewController.swift in Sources */,
 				3A88D1A31F4719AA0083798B /* GLImageView.swift in Sources */,
+				3A985BC4207A6BF1001FC5C0 /* ColorMap.swift in Sources */,
 				3ABEA6091F488861006FA083 /* Crop.swift in Sources */,
 				3A88D1A91F4726730083798B /* EAGLContext+HigherAvailableAPI.swift in Sources */,
 				3ABEA6021F484567006FA083 /* AppCoordinator.swift in Sources */,
 				3A88D19F1F470B2E0083798B /* MetalImageView.swift in Sources */,
 				3A88D18D1F470A720083798B /* AppDelegate.swift in Sources */,
+				3A985BC8207A8A2A001FC5C0 /* ImageApplyingFilter.swift in Sources */,
 				3A26D5E41FDB437E00BB0A69 /* UIView+PinToBorders.swift in Sources */,
 				3ABEA6071F488397006FA083 /* Bloom.swift in Sources */,
 				3ABEA6051F488368006FA083 /* Filter.swift in Sources */,

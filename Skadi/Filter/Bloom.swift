@@ -1,6 +1,6 @@
 import CoreImage
 
-final class Bloom: Filter {
+final class Bloom: ImageApplyingFilter {
 
   let name = "CIBloom"
 

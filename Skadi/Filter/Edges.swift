@@ -1,8 +1,8 @@
 import CoreImage
 
-final class Edges: Filter {
+final class Edges: ImageApplyingFilter {
 
-  var name = "CIEdges"
+  let name = "CIEdges"
 
   var input: CIImage?
 
